@@ -7,7 +7,7 @@ feature "Deleting an Article" do
     visit articles_path
 
     # When the delete link is clicked
-    click_on "Destroy"
+    page.find('tr:last td a',text:"Destroy").click
 
     # Then the article is deleted
     page.wont_have_content "Becoming a Code Fellow"
