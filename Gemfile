@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'minitest-rails'
 
 gem 'foundation-rails', '5.4.0'
+gem 'rails_layout', github: 'RailsApps/rails_layout'
 
 group :test do
   gem "minitest-rails-capybara"

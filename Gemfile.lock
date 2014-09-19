@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/RailsApps/rails_layout.git
+  revision: 71e67cdb4a2847207f8024b2129e4fa60afab8d2
+  specs:
+    rails_layout (1.0.22)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -147,6 +153,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   rails (= 4.1.6)
+  rails_layout!
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
