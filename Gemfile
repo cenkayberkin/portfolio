@@ -22,6 +22,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'minitest-rails'
 
+gem 'foundation-rails', '5.4.0'
+
 group :test do
   gem "minitest-rails-capybara"
 end
