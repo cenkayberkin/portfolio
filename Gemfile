@@ -39,7 +39,7 @@ gem 'launchy',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
-group :development do
+group :development,:test do
   gem "sqlite3"
 end
 
