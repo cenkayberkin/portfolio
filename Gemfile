@@ -39,6 +39,9 @@ gem 'launchy',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+group :development do
+  gem "sqlite3"
+end
 
 group :produciton do
   gem "rails_12factor"
