@@ -2,7 +2,7 @@
 ----
 
 
->First using capybara, welcome page has been tested by checking its content, after that welcome controller created with index pagez.
+>First using capybara, welcome page has been tested by checking its content, after that welcome controller created with index page.
 
 ----
 
