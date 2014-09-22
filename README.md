@@ -8,7 +8,7 @@
 
 Live Deployment of this portfolio app.
 ----
-[www.cenkayberkin.com](www.cenkayberkin.com)
+[www.cenkayberkin.com](http://www.cenkayberkin.com)
 
 ----
 
