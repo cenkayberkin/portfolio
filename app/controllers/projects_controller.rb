@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project , notice: "Project has been created."
+      redirect_to projects_url, notice: "Project has been created."
     else
       flash.now[:error] = 'Project could not be saved.'
       render :action => :new
@@ -32,6 +32,11 @@ class ProjectsController < ApplicationController
       flash.now[:error] = 'Project could not updated.'
       render :edit
     end
+  end
+
+  def destroy
+    @project.destroy
+    redirect_to projects_url, notice: 'Project was deleted successfully.'
   end
 
   private
