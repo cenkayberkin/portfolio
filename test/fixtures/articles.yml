@@ -5,3 +5,10 @@ cr:
 http:
   title: Intro to HTTP
   body: It's all about the request-response cycle!
+portfolio:
+    name: How meta
+    technologies_used: Ruby, Rails, Zurb
+
+  freelance:
+    name: Barnyard Cereal
+    technologies_used: Ruby, Rails, Farmville API, Automilker
