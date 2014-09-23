@@ -4,7 +4,7 @@
 ### Status
 [![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
 
->First using capybara, welcome page has been tested by checking its content, after that welcome controller created with index page.
+>Projects , crud functionality added, articles crud working fine.
 
 ----
 
