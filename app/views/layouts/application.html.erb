@@ -15,8 +15,7 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= flash.now[:error] = "Project could not be saved." %>
+       <%= render 'layouts/messages'  %>
        <%= yield %>
     </main>
   </body>
