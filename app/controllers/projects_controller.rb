@@ -4,23 +4,28 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
+
   def new
     @project = Project.new
   end
+
   def create
     @project = Project.new(project_params)
     if @project.save
       flash[:notice] = "Project has been created."
       redirect_to @project
     else
-     # we'll get to this in a bit
+      flash.now[:error] = 'Project could not be saved.'
+      render :action => :new
     end
   end
+
   def show
   end
-  def edit
 
+  def edit
   end
+
   def update
     if @project.update_attributes(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'

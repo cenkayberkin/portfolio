@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
 
-# gem 'better_errors'
+gem 'better_errors'
 gem 'binding_of_caller'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'eefgilm'
