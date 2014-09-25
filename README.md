@@ -1,8 +1,8 @@
 # This is portfolio site, its been written as code fellows project.
 ----
 
-### Status
-[![Build Status](https://travis-ci.org/simkimsia/UtilityBehaviors.png)](https://travis-ci.org/simkimsia/UtilityBehaviors)
+[ ![Codeship Status for cenkayberkin/portfolio](https://www.codeship.io/projects/07f88fa0-2702-0132-f01f-2a710ae03187/status)](https://www.codeship.io/projects/37615)
+
 
 >Projects , crud functionality added, articles crud working fine.
 
