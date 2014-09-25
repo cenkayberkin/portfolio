@@ -3,8 +3,10 @@
 
 [ ![Codeship Status for cenkayberkin/portfolio](https://www.codeship.io/projects/07f88fa0-2702-0132-f01f-2a710ae03187/status)](https://www.codeship.io/projects/37615)
 
+[![Coverage Status](https://coveralls.io/repos/cenkayberkin/portfolio/badge.png)](https://coveralls.io/r/cenkayberkin/portfolio)
 
->Projects , crud functionality added, articles crud working fine.
+>Devise Gem installed, tests written to check login , signup features. Old tests are modified inorder to keep up with 
+authorization features.
 
 ----
 
