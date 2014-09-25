@@ -10,3 +10,7 @@ Rails::TestTask.new("test:features" => "test:prepare") do |t|
 end
 
 Rake::Task["test:run"].enhance ["test:features"]
+
+require 'coveralls/rake/task'
+Coveralls::RakeTask.new
+task :test_with_coveralls => [:spec, :features, 'coveralls:push']
