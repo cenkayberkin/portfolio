@@ -17,7 +17,15 @@ feature "Creating an article" do
   # end
   scenario "submit form data to create a new article" do
     # Given a completed new article form
-    visit new_article_path
+    visit "/"
+    click_on "Login"
+    fill_in "Email", with: "user1@mysite.com"
+    fill_in "Password", with: "user123"
+    click_button "Log in"
+
+    visit "/articles/new"
+    # save_and_open_page
+
     fill_in "Title", with: articles(:cr).title
     fill_in "Body", with: articles(:cr).body
 

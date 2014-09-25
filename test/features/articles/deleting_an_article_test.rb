@@ -3,6 +3,16 @@ require "test_helper"
 feature "Deleting an Article" do
   scenario "article is deleted with a click" do
     # Given an existing article
+    visit "/"
+    click_on "Login"
+    fill_in "Email", with: "user1@mysite.com"
+    fill_in "Password", with: "user123"
+
+    visit "/"
+    click_on "Login"
+    fill_in "Email", with: "user1@mysite.com"
+    fill_in "Password", with: "user123"
+
     Article.create(title: "Becoming a Code Fellow", body: "Means striving for excellence.")
     visit articles_path
 

@@ -1,6 +1,8 @@
 cr:
   title: Code Rails
   body: This is how I learned web development!
+  author_id: 206669143
 http:
   title: Intro to HTTP
   body: It's all about the request-response cycle!
+  author_id: 358143215
