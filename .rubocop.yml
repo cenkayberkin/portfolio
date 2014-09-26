@@ -1,0 +1,15 @@
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 154
+AllCops:
+  RunRailsCops: true
+  Include:
+    - app/models/*.rb
+    - Gemfile
+  Exclude:
+    - 'db/**/*'
+    - '**/bin/**'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/

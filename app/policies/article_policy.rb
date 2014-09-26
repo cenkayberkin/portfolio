@@ -9,9 +9,11 @@ class ArticlePolicy
   def publish?
     @user.editor?
   end
+
   def update?
     @user.editor?
   end
+
   def destroy?
     @user.editor?
   end

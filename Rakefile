@@ -5,12 +5,12 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
-Rails::TestTask.new("test:features" => "test:prepare") do |t|
-  t.pattern = "test/features/**/*_test.rb"
+Rails::TestTask.new('test:features' => 'test:prepare') do |t|
+  t.pattern = 'test/features/**/*_test.rb'
 end
 
-Rake::Task["test:run"].enhance ["test:features"]
+Rake::Task['test:run'].enhance ['test:features']
 
 require 'coveralls/rake/task'
 Coveralls::RakeTask.new
-task :test_with_coveralls => [:spec, :features, 'coveralls:push']
+task test_with_coveralls: [:spec, :features, 'coveralls:push']

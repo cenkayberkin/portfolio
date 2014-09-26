@@ -12,10 +12,10 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to projects_url, notice: "Project has been created."
+      redirect_to projects_url, notice: 'Project has been created.'
     else
       flash.now[:error] = 'Project could not be saved.'
-      render :action => :new
+      render action: :new
     end
   end
 
@@ -40,10 +40,12 @@ class ProjectsController < ApplicationController
   end
 
   private
-    def project_params
-      params.require(:project).permit(:name, :technologies_used)
-    end
-    def set_project
-      @project = Project.find(params[:id])
-    end
+
+  def project_params
+    params.require(:project).permit(:name, :technologies_used)
+  end
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 end
