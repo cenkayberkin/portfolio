@@ -31,7 +31,8 @@ feature "Creating an article" do
 
   scenario "unauthenticated site vistiors cannot see new article button" do
     visit articles_path
-    page.wont_have_link "New Article"
+    # save_and_open_page
+    page.wont_have_content "New Article"
   end
 
   scenario "authors can't publish" do
@@ -47,14 +48,19 @@ feature "Creating an article" do
     # When I visit the new page
     visit new_article_path
 
+    # save_and_open_page
+
     # There is a checkbox for published
     page.must_have_field('Published')
+
 
     # When I submit the form
     fill_in "Title", with: articles(:cr).title
     fill_in "Body", with: articles(:cr).body
     check "Published"
     click_on "Create Article"
+
+    # save_and_open_page
 
     # Then the published article should be shown
     page.text.must_include "Status: Published"
