@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+    # if ArticlePolicy.new(current_user, @article).publish?
     @article = Article.new(article_params)
     current_user.articles << @article
     respond_to do |format|
