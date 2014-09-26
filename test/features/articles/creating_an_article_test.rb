@@ -2,19 +2,6 @@ require "test_helper"
 
 
 feature "Creating an article" do
-  # scenario "submit form data to create a new article" do
-  #   # Given a completed new article form
-  #   visit new_article_path
-  #   fill_in "Title", with: "Code Rails"
-  #   fill_in "Body", with: "This is how I learned to make web apps."
-
-  #   # When I submit the form
-  #   click_on "Create Article"
-
-  #   # Then a new article should be created and displayed
-  #   page.text.must_include "Article was successfully created"
-  #   page.text.must_include "how I learned to make web apps"
-  # end
   scenario "submit form data to create a new article" do
     # Given a completed new article form
     visit "/"
@@ -35,6 +22,42 @@ feature "Creating an article" do
     # Then a new article should be created and displayed
     page.text.must_include "Article was successfully created"
     page.text.must_include articles(:cr).title
+  end
+
+  scenario "unauthenticated site visitors cannot visit new_article_path" do
+    visit new_article_path
+    page.must_have_content "You need to sign in or sign up before continuing"
+  end
+
+  scenario "unauthenticated site vistiors cannot see new article button" do
+    visit articles_path
+    page.wont_have_link "New Article"
+  end
+
+  scenario "authors can't publish" do
+    sign_in(:author)
+    visit new_article_path
+    page.wont_have_field('published')
+  end
+
+  scenario "editors can publish" do
+    # Given an editor's account
+    sign_in(:editor)
+
+    # When I visit the new page
+    visit new_article_path
+
+    # There is a checkbox for published
+    page.must_have_field('Published')
+
+    # When I submit the form
+    fill_in "Title", with: articles(:cr).title
+    fill_in "Body", with: articles(:cr).body
+    check "Published"
+    click_on "Create Article"
+
+    # Then the published article should be shown
+    page.text.must_include "Status: Published"
   end
 
 end
