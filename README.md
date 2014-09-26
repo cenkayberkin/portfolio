@@ -7,7 +7,7 @@
 
 >Devise Gem installed, tests written to check login , signup features. Old tests are modified inorder to keep up with 
 authorization features.
-
+>Authorization features added, role editors can delete and edit articles.
 ----
 
 Live Deployment of this portfolio app.
