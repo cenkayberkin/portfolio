@@ -8,7 +8,6 @@
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
-
 <p>
   <strong>Body:</strong>
   <%= @article.body %>
@@ -17,6 +16,15 @@
   <b>Status:</b>
   <%= @article.published? ? "Published" : "Unpublished" %>
 </p>
+
+<div>
+  <% if @article.comments.count > 0 %>
+    <%= render 'comments/list' %>
+  <% else %>
+    <p>No comments added yet.</p>
+  <% end %>
+  <%= render 'comments/form' %>
+</div>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

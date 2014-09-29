@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'coveralls', require: false
 gem 'pundit'
+gem 'pry'
 
 group :test do
   gem 'minitest-rails-capybara'

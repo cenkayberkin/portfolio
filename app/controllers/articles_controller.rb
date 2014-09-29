@@ -12,9 +12,11 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+     # binding.pry
+     # @comments = @article.comments
+     @comment = @article.comments.build
   end
 
-  # GET /articles/new
   def new
     @article = Article.new
   end
@@ -67,6 +69,7 @@ class ArticlesController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_article
     @article = Article.find(params[:id])
+
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
