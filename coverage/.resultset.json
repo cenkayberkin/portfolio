@@ -849,6 +849,28 @@
         null,
         null
       ],
+      "/Users/cenk/code_fellows/day2/portfolio/app/policies/article_policy.rb": [
+        1,
+        1,
+        null,
+        1,
+        16,
+        16,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        8,
+        null,
+        null,
+        1,
+        8,
+        null,
+        null
+      ],
       "/Users/cenk/code_fellows/day2/portfolio/app/controllers/projects_controller.rb": [
         1,
         1,
@@ -901,30 +923,8 @@
         5,
         null,
         null
-      ],
-      "/Users/cenk/code_fellows/day2/portfolio/app/policies/article_policy.rb": [
-        1,
-        1,
-        null,
-        1,
-        16,
-        16,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        8,
-        null,
-        null,
-        1,
-        8,
-        null,
-        null
       ]
     },
-    "timestamp": 1412032981
+    "timestamp": 1412034691
   }
 }

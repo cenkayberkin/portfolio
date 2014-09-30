@@ -3,8 +3,10 @@ class CommentsController < ApplicationController
 
     @article = Article.find(commments_params[:article_id])
     @comment = @article.comments.new(commments_params)
+    @comment.author_email = current_user.email
     @comment.save
 
+    # 2.pry
     if @comment.save
       redirect_to [@article], notice: 'Comment added.'
     else

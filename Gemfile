@@ -22,6 +22,8 @@ gem 'devise'
 gem 'coveralls', require: false
 gem 'pundit'
 gem 'pry'
+gem 'omniauth-twitter'
+gem 'figaro'
 
 group :test do
   gem 'minitest-rails-capybara'
