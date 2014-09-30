@@ -7,7 +7,7 @@
 .DS_Store
 # Ignore bundler config.
 /.bundle
-
+.idea
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -15,6 +15,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
+.secrets.yml
 # Ignore application configuration
 /config/application.yml
