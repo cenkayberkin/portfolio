@@ -1,8 +1,12 @@
 comment1:
   content: benim adim cenk
-  article: cr
   author: user3
+  commentable: portfolio (Project)
 comment2:
   content: bu comment 2
   author: user3
-  article: cr
+  commentable: http (Article)
+comment3:
+  content: bu comment 2
+  author: user3
+  commentable: http (Article)

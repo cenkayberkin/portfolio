@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930010250) do
+ActiveRecord::Schema.define(version: 20141005162901) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -31,12 +31,11 @@ ActiveRecord::Schema.define(version: 20140930010250) do
     t.string   "referrer"
     t.text     "content"
     t.boolean  "approved"
-    t.integer  "article_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
   end
-
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
   create_table "projects", force: true do |t|
     t.string   "name"

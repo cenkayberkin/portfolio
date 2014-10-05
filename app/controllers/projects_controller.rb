@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @commentable = @project
+    @comments = @commentable.comments
+    @comment = @commentable.comments.build
+    @cresource = "project"
   end
 
   def edit

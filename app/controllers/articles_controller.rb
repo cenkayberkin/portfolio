@@ -14,7 +14,10 @@ class ArticlesController < ApplicationController
   def show
      # binding.pry
      # @comments = @article.comments
-     @comment = @article.comments.build
+     @commentable = @article
+     @comments = @commentable.comments
+     @comment = @commentable.comments.build
+     @cresource = "article"
   end
 
   def new

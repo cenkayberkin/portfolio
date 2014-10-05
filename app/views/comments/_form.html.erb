@@ -4,7 +4,8 @@
     <%= f.text_area :content %>
   </div>
 
-  <%= f.hidden_field :article_id, :value => @comment.article_id %>
+  <%= f.hidden_field :commentable_id, :value => @comment.commentable_id %>
+  <%= f.hidden_field :cresource, :value => @cresource %>
   <div class="row collapse">
     <div class="small-3 columns">
       <%= f.label :published, class: "right inline", title: "Is this article published?", data: {tooltip: true } %><br>
