@@ -16,7 +16,6 @@
   <b>Status:</b>
   <%= @article.published? ? "Published" : "Unpublished" %>
 </p>
-
 <div>
   <% if @article.comments.count > 0 %>
     <%= render 'comments/list' %>
@@ -25,6 +24,8 @@
   <% end %>
   <%= render 'comments/form' %>
 </div>
+<% if policy(@article).update? %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+<% end %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
