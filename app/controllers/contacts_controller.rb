@@ -25,7 +25,9 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
-    binding.pry
+
+    UserMailer.delay.welcome_message(@contact)
+
     # send email here
     respond_to do |format|
       if @contact.save

@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'better_errors'
 gem 'pry'
+
+gem 'sidekiq'
 gem 'fog'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -56,4 +58,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-ruby "2.1.2"
+
