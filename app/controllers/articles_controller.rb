@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    sleep 1
     @articles = Article.all
   end
 
@@ -26,15 +27,10 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
-    # binding.pry
-
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        format.html { redirect_to articles_url }
+        format.js
       end
     end
   end
@@ -44,11 +40,8 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { render :show, status: :ok, location: @article }
-      else
-        format.html { render :edit }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        format.html { redirect_to @article }
+        format.js
       end
     end
   end
@@ -56,10 +49,12 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
+
     @article.destroy
+
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to articles_url }
+      format.js
     end
   end
 

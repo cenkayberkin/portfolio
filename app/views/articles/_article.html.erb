@@ -1,0 +1,6 @@
+<%= form_for article, remote: true do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title , id:  dom_id(article) + "_title" %>
+  <%= f.submit "update" %>
+  <%= link_to "(remove)", article, method: :delete, data: {confirm: "Are you sure?"},remote: true %>
+<% end %>
