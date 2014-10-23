@@ -12,7 +12,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem 'better_errors'
+gem 'pry'
 
+gem 'sidekiq'
+gem 'fog'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -20,7 +24,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'minitest-rails'
-
+gem 'rmagick',:require => 'RMagick'
 gem 'foundation-rails', '5.4.0'
 gem 'rails_layout', github: 'RailsApps/rails_layout'
 
@@ -39,6 +43,7 @@ gem 'launchy',        group: :development
 
 # Use unicorn as the app server
 # gem 'unicorn'
+gem 'carrierwave'
 group :development,:test do
   gem "sqlite3"
 end
@@ -53,4 +58,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-ruby "2.1.2"
+
